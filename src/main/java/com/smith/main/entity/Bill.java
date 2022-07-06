@@ -9,8 +9,10 @@ import javax.persistence.Id;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @AllArgsConstructor
+@NoArgsConstructor
 @Data
 @Entity
 public class Bill {
@@ -23,9 +25,5 @@ public class Bill {
 	private Double amount;
 	private Date date;
 	private String occurance;
-	
-	public Bill() {
-		// TODO Auto-generated constructor stub
-	}
 
 }

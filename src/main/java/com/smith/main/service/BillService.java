@@ -25,10 +25,8 @@ public class BillService {
 	}
 	
 	public List<Bill> getBillsByRange(Date begin, Date end) throws BillNotFoundException{
-		List<Bill> bills = billRepository.findByDateBetween(begin, end);
-		if(bills.size() == 0) {
-			throw new BillNotFoundException("There were no bills for the specified dates");
-		}
+		List<Bill> bills = billRepository.findByDateBetweenOrderByDateAsc(begin, end);
+		
 		return bills;
 	}
 	

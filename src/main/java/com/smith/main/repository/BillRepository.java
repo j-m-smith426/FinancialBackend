@@ -11,6 +11,6 @@ import com.smith.main.entity.Bill;
 @Repository
 public interface BillRepository extends JpaRepository<Bill, Long> {
 
-	public List<Bill> findByDateBetween(Date begin, Date end);
+	public List<Bill> findByDateBetweenOrderByDateAsc(Date begin, Date end);
 
 }
